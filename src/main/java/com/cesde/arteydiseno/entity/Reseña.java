@@ -3,7 +3,6 @@ package com.cesde.arteydiseno.entity;
 import com.cesde.arteydiseno.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
-import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -11,17 +10,17 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 @Entity
-public class DetalleFactura extends BaseEntity {
+public class Reseña extends BaseEntity {
 
     @Column(nullable = false)
-    private Integer cantidad;
+    private Integer calificacion;
 
-    @Column(nullable = false, precision = 12, scale = 2)
-    private BigDecimal precioUnitario;
+    @Column(nullable = false, length = 500)
+    private String comentario;
 
     @ManyToOne
-    @JoinColumn(name = "pedido_id", nullable = false)
-    private Factura factura;
+    @JoinColumn(name = "cliente_id", nullable = false)
+    private Cliente cliente;
 
     @ManyToOne
     @JoinColumn(name = "producto_id", nullable = false)
