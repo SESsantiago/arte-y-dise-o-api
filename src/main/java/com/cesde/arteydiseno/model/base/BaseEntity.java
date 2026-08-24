@@ -1,5 +1,4 @@
-package com.cesde.arteydiseno.model;
-
+package com.cesde.arteydiseno.model.base;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
