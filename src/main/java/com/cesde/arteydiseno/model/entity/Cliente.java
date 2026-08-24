@@ -1,6 +1,6 @@
-package com.cesde.arteydiseno.entity;
+package com.cesde.arteydiseno.model.entity;
 
-import com.cesde.arteydiseno.model.BaseEntity;
+import com.cesde.arteydiseno.model.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
@@ -20,8 +20,8 @@ public class Cliente extends BaseEntity {
     private String correo;
 
     @Column(nullable = false, unique = true, length = 20)
-
     private String telefono;
+
     @OneToMany(mappedBy = "cliente")
     private List<Factura> facturas;
 
