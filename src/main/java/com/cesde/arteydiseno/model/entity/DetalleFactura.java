@@ -1,6 +1,6 @@
-package com.cesde.arteydiseno.entity;
+package com.cesde.arteydiseno.model.entity;
 
-import com.cesde.arteydiseno.model.BaseEntity;
+import com.cesde.arteydiseno.model.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;

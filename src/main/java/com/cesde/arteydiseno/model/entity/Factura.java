@@ -1,7 +1,7 @@
-package com.cesde.arteydiseno.entity;
+package com.cesde.arteydiseno.model.entity;
 
-import com.cesde.arteydiseno.embeddable.DireccionEnvio;
-import com.cesde.arteydiseno.model.BaseEntity;
+import com.cesde.arteydiseno.model.embeddable.DireccionEnvio;
+import com.cesde.arteydiseno.model.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -28,6 +28,6 @@ public class Factura extends BaseEntity {
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DetalleFactura> detallesfacturas;
 }
